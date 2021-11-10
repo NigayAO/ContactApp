@@ -15,7 +15,7 @@ class MainTableViewController: UITableViewController {
         super.viewDidLoad()
         tabBarController?.delegate = self
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return persons.count
     }
@@ -28,7 +28,7 @@ class MainTableViewController: UITableViewController {
         cell.contentConfiguration = content
         return cell
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let contactInfoVC = segue.destination as? ContactInfoViewController else { return }
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
